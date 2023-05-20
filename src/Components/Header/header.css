@@ -1,0 +1,35 @@
+
+.links{
+    color: #fff;
+    position: relative;
+     transition: all .6s ease-in-out;
+}
+
+.links.active::before{
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: -.2rem;
+    border-top: .1rem solid #fff;
+    transition: all .6s ease-in-out;
+
+}
+
+.links::before{
+    width: 0%;
+    content: '';
+    position: absolute;
+    bottom: -.2rem;
+    border-top: .1rem solid #fff;
+    transition: all .6s ease-in-out;
+
+}
+.links:hover::before{
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: -.2rem;
+    border-top: .1rem solid #fff;
+    transition: all .6s ease-in-out;
+
+}
