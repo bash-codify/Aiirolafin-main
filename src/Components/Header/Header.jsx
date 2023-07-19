@@ -21,13 +21,9 @@ const Header = () => {
             <div className=' flex items-center justify-between h-h10'>
                 <div  className=' flex items-center justify-center gap-3 cursor-pointer S768:gap-4 z-20'>
                     <div>
-                        <Image src={logo} width={2000} height={2000} alt='logo' className=' w-7 S768:w-9 ' />
+                        <Image src={logo} width={2000} height={2000} alt='logo' className=' w-28 S768:w-32 h-32 object-cover ' />
                     </div>
-                    <div>
-                        <h1 className=' font-medium text-[1.16rem] tracking-wide text-white S768:text-[1.25rem] '>
-                            Aiirolafin
-                        </h1>
-                    </div>
+                    
                 </div>
 
                 {/* Large Screen  Nav List Components */}

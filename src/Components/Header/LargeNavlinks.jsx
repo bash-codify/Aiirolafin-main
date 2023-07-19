@@ -20,7 +20,7 @@ const LargeNavlinks = () => {
                 links.map((item, i) =>{
 
                     return(
-                        <div className= {` ${ pathName === item.path ? 'active' : null} links`} key={i}>
+                        <div className= {` ${ pathName === item.path ? 'active' : null} links hover:tracking-widest hover:font-medium`} key={i}>
 
                          <Link href={''}>
                             {item.link}
