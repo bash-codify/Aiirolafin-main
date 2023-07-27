@@ -19,6 +19,9 @@ module.exports = {
 
 
       },
+      boxShadow: {
+        'shadow': 'rgba(0, 0, 0, 0.24) 0px 3px 8px;',
+      },
 
       width:{
 
@@ -58,10 +61,12 @@ module.exports = {
       screens: {
 
           'S360': "360px",
+          'S412': "412px",
           'S500': "500px",
           'S600': "600px",
           'S700': "700px",
           'S768': "768px",
+          'S820': "820px",
           'S900': "900px",
           'S1024': "1024px",
           'S1200': "1200px",

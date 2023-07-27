@@ -14,7 +14,7 @@ const LargeNavlinks = () => {
 
     <section >
 
-        <div className=' flex items-center justify-center gap-8 h-h85 text-[1.1rem] S768:text-[.88rem] tracking-wider font-normal ' >
+        <div className=' flex items-center justify-center gap-8 h-0 S768:text-[1.5rem] S900:text-[1.6rem] tracking-wider font-normal ' >
 
             {
                 links.map((item, i) =>{
@@ -22,7 +22,7 @@ const LargeNavlinks = () => {
                     return(
                         <div className= {` ${ pathName === item.path ? 'active' : null} links hover:tracking-widest hover:font-medium`} key={i}>
 
-                         <Link href={''}>
+                         <Link href={item.path}>
                             {item.link}
                         </Link>
 

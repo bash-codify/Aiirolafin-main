@@ -9,13 +9,6 @@ export default{
        
             {
 
-            name: 'desc',
-            title: 'Desc',
-            type: 'string',
-
-            },
-            {
-
                 name: 'content',
                 title: 'Content',
                 type: 'array',
@@ -28,6 +21,30 @@ export default{
                     type: 'image'
                     }
                 ]
+            },
+
+            {
+                name: 'image',
+                title: 'Image',
+                type: 'image',
+                options: {
+                    hotspot: true,
+                },
+            },
+            {
+                name: 'name',
+                title: 'Name',
+                type: 'string',
+
+            },
+
+            
+            {
+
+                name: 'desc',
+                title: 'Desc',
+                type: 'string',
+
             },
                         
     ] 

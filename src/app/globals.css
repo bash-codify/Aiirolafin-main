@@ -5,8 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html{
+    font-size: 62.5%;
+}
+
 body{
 
     font-family: 'Poppins', sans-serif;
     
+}
+
+
+@media screen and (min-width: 768px) {
+    
+.grids-col{
+    grid-template-columns: 70% 30%;
+}
 }
