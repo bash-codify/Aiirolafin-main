@@ -21,7 +21,7 @@ export const Banner = async () => {
     
   return (
     
-    <section className=" w-full min-h-[88vh] mt-[12vh]">
+    <section className=" w-full min-h-[88vh]">
       <article >
         {
           query.map((item, index) => {

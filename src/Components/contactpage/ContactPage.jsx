@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const ContactPage = () => {
   return (
-     <section className=' w-full min-h-[88vh] mt-[12vh]'>
+     <section className=' w-full min-h-[88vh]'>
         <div className=' w-full min-h-[35vh]  S768:min-h-[35vh] bg-[#111144d2] '>
             <div className=' flex items-center justify-center min-h-[35vh] S768:min-h-[35vh] text-white'>
 

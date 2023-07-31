@@ -5,6 +5,7 @@ import {PortableText} from '@portabletext/react'
 import Image from 'next/image'
 import { urlForImage } from '../../../sanity/lib/image'
 import Request from '../contactpage/Request'
+import { PortableTextComponent } from '../PortableTextComponent'
 
 
 function getAbout(){
@@ -17,7 +18,7 @@ const AboutPage = async () => {
   const query = await getAbout()
   
   return (
-    <section className=' w-full min-h-[88vh] mt-[12vh]'>
+    <section className=' w-full min-h-[88vh]'>
         <div className=' w-full min-h-[35vh]  S768:min-h-[35vh] bg-[#111144d2] '>
             <div className=' flex items-center justify-center min-h-[35vh] S768:min-h-[35vh] text-white'>
 
@@ -36,7 +37,7 @@ const AboutPage = async () => {
                 Welcome
               </h2>
               <h1 className=' text-[2.5rem] font-semibold mb-[1rem]'>
-                Aiirolafin RealEstate Limited
+                Aiirolafin Real Estate Company
               </h1>
             </div>
             <div>
@@ -48,7 +49,7 @@ const AboutPage = async () => {
                     <div className=' grid grids-col gap-10'>
                       <div>
 
-                        <PortableText value={content}/>
+                        <PortableText value={content}  components={PortableTextComponent}/>
                         
                         
                       </div>

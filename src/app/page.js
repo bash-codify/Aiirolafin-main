@@ -1,4 +1,5 @@
 import { Banner } from "@/Components/Banner/Banner";
+import Blog from "@/Components/blog/Blog";
 import Request from "@/Components/contactpage/Request";
 import Properties from "@/Components/property/Properties";
 import Aiirolafin from "@/Components/why-us/Aiirolafin";
@@ -11,6 +12,7 @@ export default function Home() {
       <Banner/>
       <Aiirolafin/>
       <Properties/>
+      <Blog/>
       <Request/>
      
      

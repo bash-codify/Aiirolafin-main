@@ -3,7 +3,6 @@
 import React from 'react';
 import { BsFillHousesFill } from "react-icons/bs";
 import { GoLaw } from "react-icons/go";
-// import { FaRegHandshake } from "react-icons/fa6";
 import { Icon } from '@iconify/react';
 
 const Aiirolafin = () => {

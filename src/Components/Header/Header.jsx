@@ -15,7 +15,7 @@ const Header = () => {
     })
     
   return (
-    <header className=' fixed top-0 left-0 w-full h-[12vh] bg-primaryColor z-50 shadow-shadow'>
+    <header className=' w-full h-[12vh] bg-primaryColor z-50 shadow-shadow'>
 
         <nav className=' w-[90%] m-auto'>
             <div className=' flex items-center justify-between h-[12vh]'>
