@@ -6,11 +6,13 @@ import { VscListFilter } from "react-icons/vsc";
 import MobileNavList from './MobileNavList';
 import LargeNavlinks from './LargeNavlinks';
 import Link from 'next/link';
+// import { useGlobalContext } from '../context/contextapi';
 
 
 const Header = () => {
     const [istoggle, setIsToggle] = useState(false)
     const [isfix, setIsFix]= useState(false)
+    // const {isfix, setIsFix} = useGlobalContext();
 
 
        
@@ -18,11 +20,11 @@ const Header = () => {
     useEffect(()=>{
         const Fixed = () => {
 
-            if(window.scrollY > 500){
+            if(window.scrollY > 650){
                 console.log('yelllo');
                 setIsFix(true);
             }
-            if(window.scrollY < 500){
+            if(window.scrollY < 650){
                 setIsFix(false)
             }
             else {
@@ -42,7 +44,7 @@ const Header = () => {
     })
     
   return (
-    <header className={` ${isfix ? 'fixed top-0 left-0' : null} w-full h-[12vh] bg-primaryColor z-50 shadow-shadow `}>
+    <header className={` ${isfix ? 'fixed top-0 left-0 transition-all duration-500 ease-linear' : null} w-full h-[12vh] bg-primaryColor z-50 shadow-shadow `}>
 
         <nav className=' w-[90%] m-auto'>
             <div className=' flex items-center justify-between h-[12vh]'>
