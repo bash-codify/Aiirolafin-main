@@ -1,28 +1,55 @@
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import logo from '../../assets/logo.png'
 import { VscListFilter } from "react-icons/vsc";
 import MobileNavList from './MobileNavList';
 import LargeNavlinks from './LargeNavlinks';
+import Link from 'next/link';
 
 
 const Header = () => {
     const [istoggle, setIsToggle] = useState(false)
+    const [isfix, setIsFix]= useState(false)
+
+
+       
+
+    useEffect(()=>{
+        const Fixed = () => {
+
+            if(window.scrollY > 500){
+                console.log('yelllo');
+                setIsFix(true);
+            }
+            if(window.scrollY < 500){
+                setIsFix(false)
+            }
+            else {
+                setIsFix(true)
+            }
+
+        }
+        window.addEventListener('scroll', Fixed)
+        return ()=> window.removeEventListener('scroll', Fixed)
+
+    }, [isfix])
+
+
 
     useEffect(()=>{
         istoggle ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
     })
     
   return (
-    <header className=' w-full h-[12vh] bg-primaryColor z-50 shadow-shadow'>
+    <header className={` ${isfix ? 'fixed top-0 left-0' : null} w-full h-[12vh] bg-primaryColor z-50 shadow-shadow `}>
 
         <nav className=' w-[90%] m-auto'>
             <div className=' flex items-center justify-between h-[12vh]'>
                 <div  className=' flex items-center justify-center gap-3 cursor-pointer S768:gap-4 z-20'>
-                    <div className=' pt-1'>
+                    <Link href='/' className=' pt-1'>
                         <Image src={logo} width={2000} height={2000} priority alt='logo' className=' w-[14rem] object-contain ' />
-                    </div>
+                    </Link>
                     
                 </div>
 

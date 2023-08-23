@@ -19,4 +19,9 @@
         link: 'Contact Us',
         path: 'contact'
     },
+    {
+        id: 4,
+        link: 'Blog',
+        path: 'blogs'
+    },
 ]

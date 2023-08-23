@@ -18,9 +18,9 @@ const AboutPage = async () => {
   const query = await getAbout()
   
   return (
-    <section className=' w-full min-h-[88vh]'>
-        <div className=' w-full min-h-[35vh]  S768:min-h-[35vh] bg-[#111144d2] '>
-            <div className=' flex items-center justify-center min-h-[35vh] S768:min-h-[35vh] text-white'>
+    <section className=' w-full min-h-[88vh]' id='about'>
+        <div className=' w-full min-h-[30vh]  S768:min-h-[35vh] bg-[#111144d2] '>
+            <div className=' flex items-center justify-center min-h-[30vh] S768:min-h-[35vh] text-white'>
 
                 <h1 className=' text-[4rem] font-semibold'>
                     About Us
@@ -31,7 +31,7 @@ const AboutPage = async () => {
         </div>
         <article className=' w-[90%] m-auto'>
 
-          <div className=' mt-28 '>
+          <div className=' mt-20 '>
             <div>
               <h2 className=' text-[2.5rem] font-semibold mb-[1rem] text-neutral-400'>
                 Welcome

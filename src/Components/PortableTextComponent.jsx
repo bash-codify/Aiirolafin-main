@@ -8,8 +8,8 @@ export const PortableTextComponent = {
     types:{
         image:({value})=>{
             return(
-                <div className=" w-full flex items-center justify-center">
-                    <Image src={urlForImage(value).url()} width={2000} height={2000} priority alt='content image' className=" w-[50rem] h-[30rem] object-contain aspect-auto " />
+                <div className=" w-full flex items-center justify-center py-5 S768:py-10">
+                    <Image src={urlForImage(value).url()} width={2000} height={2000} priority alt='content image' className=" w-[100rem] h-[30rem] object-contain aspect-auto " />
                 </div>
             );
         },
@@ -58,12 +58,12 @@ export const PortableTextComponent = {
             </h6>
         ),
         p:({children})=>(
-            <p className=" text-[1.6rem] font-medium">
+            <p className=" text-[1.6rem]">
                 {children}
             </p>
         ),
         blockquote:({children})=>(
-            <blockquote>
+            <blockquote className=" text-[1.6rem]">
                 {children}
             </blockquote>
         ),

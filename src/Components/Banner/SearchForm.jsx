@@ -27,7 +27,7 @@ const SearchForm = () => {
                 <div className=' flex flex-col items-center justify-center gap-2'>
                     <label htmlFor="location" className=' text-[2rem] S500:text-[1.5rem] font-semibold tracking-wider text-primaryColor'>Locations</label>
 
-                    <input type="text" name="location" id="location" placeholder='Surulere, Lagos' className=' w-[65vw] text-[1.4rem] h-[4rem] S500:w-[70vw] outline-none bg-[#111144de] text-textColor pl-5 rounded-xl S768:w-56 S820:w-60 S1024:w-80 ' />
+                    <input type="text" name="location" id="location" placeholder='Surulere' className=' w-[65vw] text-[1.4rem] h-[4rem] S500:w-[70vw] outline-none bg-[#111144de] text-textColor pl-5 rounded-xl S768:w-56 S820:w-60 S1024:w-80 ' />
                 </div>
 
             </div>
@@ -44,7 +44,7 @@ const SearchForm = () => {
 
                     <label htmlFor="budget" className=' text-[2rem] S500:text-[1.5rem] font-semibold tracking-wider text-primaryColor' >Budgets</label>
 
-                    <input type="text" name="location" id="location" placeholder='$ 1,000,000' className=' w-[65vw] text-[1.4rem] h-[4rem] S500:w-[70vw] outline-none bg-[#111144de] text-textColor pl-3 rounded-xl S768:w-56 S820:w-60 S1024:w-80' />
+                    <input type="text" name="location" id="location" placeholder='1,000,000' className=' w-[65vw] text-[1.4rem] h-[4rem] S500:w-[70vw] outline-none bg-[#111144de] text-textColor pl-3 rounded-xl S768:w-56 S820:w-60 S1024:w-80' />
 
                 </div>
 

@@ -66,8 +66,9 @@ const Footer = () => {
           </div>
 
         </div>
-        <div className=' w-full flex items-center justify-center cursor-pointer text-[1.3rem] S768:text-[1.6rem] mt-8 text-white italic'>
-          <p> <span className=' text-[1.8rem]'>&copy;</span> Aiirolafin - 2023. All rights reserved. Web Design by Bash-Tech</p>
+        <div className=' w-full flex items-center justify-center cursor-pointer text-[1.3rem] S768:text-[1.4
+        rem] mt-8 text-white italic'>
+          <p className=' text-center'> <span className=' text-[1.8rem]'>&copy;</span> Aiirolafin - 2023. All rights reserved. Web Design by Bash-Tech</p>
         </div>
       </div>
 

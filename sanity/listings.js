@@ -26,6 +26,12 @@ export default {
             },
 
             {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            },
+
+            {
 
             name: 'types',
             title: 'Rent Or Sales',

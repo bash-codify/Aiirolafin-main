@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const ListingPage = () => {
   return (
-    <section className=' w-full min-h-[88vh] mt-[12vh]'>
+    <section className=' w-full min-h-[88vh] pb-28' id='listings'>
         <div className=' w-full min-h-[40vh] flex items-center justify-center relative'>
             <Image src={listing} alt='listing' className=' w-full h-[40vh] object-cover ' />
 

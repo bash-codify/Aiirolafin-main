@@ -26,7 +26,7 @@ const MobileNavList = ({istoggle, setIsToggle}) => {
                     return(
                         <div className= {` ${pathName === item.path ? 'active' : null} links hover:tracking-widest hover:font-medium`} key={i}>
 
-                         <Link href={item.path}>
+                         <Link href={item.path} onClick={()=> setIsToggle(false)}>
                             {item.link}
                         </Link>
 

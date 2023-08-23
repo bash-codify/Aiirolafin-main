@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const ContactPage = () => {
   return (
-     <section className=' w-full min-h-[88vh]'>
+     <section className=' w-full min-h-[88vh] pb-28' id='contact'>
         <div className=' w-full min-h-[35vh]  S768:min-h-[35vh] bg-[#111144d2] '>
             <div className=' flex items-center justify-center min-h-[35vh] S768:min-h-[35vh] text-white'>
 
@@ -36,7 +36,7 @@ const ContactPage = () => {
                                     Customer Support
                                 </p>
                                 <p>
-                                    Mon-Sat:8:00 AM - 5:00 PM
+                                    Mon-Sat: 8:00 AM - 5:00 PM
                                 </p>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const ContactPage = () => {
                     </div>
 
                 </div>
-                <div className=' mt-20 grid S768:grid-cols-2 gap-10'>
+                <div className=' mt-20 grid S768:grid-cols-2 gap-10 pb-28'>
 
                     <div className='  w-full h-fit bg-white shadow-shadow p-8 rounded-3xl'>
                         <div>
@@ -93,7 +93,7 @@ const ContactPage = () => {
                     </div>
 
                     <div>
-                         <iframe className='w-full h-[63rem] rounded-3xl'  id="gmap_canvas" src="https://maps.google.com/maps?q=plot%2030%20Oba%20Babinton%20Ashaye%20Crescent,%20Omole%20Phase%201,%20101233,%C2%A0Lagos%20Lagos+()&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                         <iframe className='w-full h-[63.8rem] rounded-3xl'  id="gmap_canvas" src="https://maps.google.com/maps?q=plot%2030%20Oba%20Babinton%20Ashaye%20Crescent,%20Omole%20Phase%201,%20101233,%C2%A0Lagos%20Lagos+()&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                     
                 </div>
