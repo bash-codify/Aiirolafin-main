@@ -26,7 +26,7 @@ const SearchForm = () => {
 
     <div className=" absolute top-0 left-0 pt-[30rem]  S768:pt-[28rem] S71024:pt-[32rem] w-full flex flex-col items-center justify-center h-screen px-5 S768:items-start S768:pl-24 S1024:pl-28 S1200:pl-32">
 
-    <form onSubmit={`${(e)=> submitHandler(e)}`}> 
+    <form onSubmit={(e)=> submitHandler(e)}> 
         <div className=' flex flex-col S768:flex-row items-center justify-start gap-6 bg-[#ffffffa9] w-[90vw] py-5 rounded-3xl S768:p-3 S768:w-fit'>
 
             <div className=' flex items-center justify-center gap-3'>
