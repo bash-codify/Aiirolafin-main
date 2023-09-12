@@ -11,8 +11,8 @@ const ListingsDetails = ({query}) => {
     <section className='w-full min-h-[88vh] pb-28'>
 
       <div className='w-[99%] S768:w-[90%] m-auto'>
-        <div className=' flex items-center justify-center w-fit h-14  shadow-shadow ml-9 mt-6'>
-          <button className='  p-2' >
+        <div className=' flex items-center justify-center w-fit h-14  shadow-shadow ml-9 mt-0'>
+          {/* <button className='  p-2' >
             <Link href='listings' className=' w-fit text-[3rem] flex items-center'>
             <p>
                 <VscArrowSmallLeft/>
@@ -22,7 +22,7 @@ const ListingsDetails = ({query}) => {
             </p>
             
             </Link>
-          </button>
+          </button> */}
         </div>
 
       </div>

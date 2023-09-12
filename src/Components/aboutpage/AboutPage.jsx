@@ -46,7 +46,7 @@ const AboutPage = async () => {
                   const {name, image, desc,content} = item
                  
                   return(
-                    <div className=' grid grids-col gap-10'>
+                    <div className=' grid grids-col gap-10' key={index}>
                       <div>
 
                         <PortableText value={content}  components={PortableTextComponent}/>

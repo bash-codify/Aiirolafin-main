@@ -53,7 +53,7 @@ export default {
 
             name: 'price',
             title: 'Price',
-            type: 'string',
+            type: 'number',
 
             },
 

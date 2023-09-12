@@ -56,69 +56,67 @@ const Blog = async () => {
 
                 </div>
                 <div className=' flex flex-col  S1024:flex-row gap-16 mt-24'>
-                    {
-                        query.slice(0, 1).map((item, index )=>{
-                            
-                            const {image, title, _id, desc, publishedAt} = item;
+                    <div>
 
-                            return (
-
-                                <Fragment key={index}>
+                        {
+                            query.slice(0, 1).map((item, index )=>{
                                 
-                                <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl flex flex-col S600:flex-row S900:flex-col items-start justify-start gap-5 h-fit' >
-                                    <Image  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full S600:w-[20rem] S600:h-[14rem] S768:w-full S768:h-[15rem] S1024:w-[70rem] S1024:h-[33rem] object-cover rounded-3xl" />
-                                    <div >
-                                        <p className=' text-[1.4rem]'>
-                                            {new Date(publishedAt).toDateString('en-UK',{day: 'numeric',
-                                            month: 'long',
-                                            year: 'numeric',})}
-                                        </p>
-                                        <h2 className=' text-[2rem] font-semibold'>
-                                            {title}
-                                        </h2>
-                                        <p className=' text-[1.4rem]'>
-                                            {desc}
-                                        </p>
-                                    </div>
-                                </Link>
-                                    
-                         
+                                const {image, title, _id, desc, publishedAt} = item;
 
-                                <div className=' flex items-center justify-start gap-16 flex-col '>
-                                    {
-                                        query.slice(1, 4).map((img, i)=>{
-                                            const {image, title, _id, desc, publishedAt} = img;
-    
-                                            return(
-                                    <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl'>
-                                    <div className=' flex flex-col S600:flex-row items-start justify-start gap-5' key={i}>
-                                        <Image  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full S600:w-[20rem] S600:h-[14rem] S768:w-full S768:h-[15rem] S1024:h-[13rem] object-cover rounded-3xl" />
-                                        <div>
-                                            <p className=' text-[1.2rem]'>
+                                return (
+
+                                
+                                    
+                                    <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl flex flex-col S600:flex-row S900:flex-col items-start justify-start gap-5 h-fit' key={index}>
+                                        <Image  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full S600:w-[20rem] S600:h-[14rem] S768:w-full S768:h-[15rem] S1024:w-[70rem] S1024:h-[33rem] object-cover rounded-3xl" />
+                                        <div >
+                                            <p className=' text-[1.4rem]'>
                                                 {new Date(publishedAt).toDateString('en-UK',{day: 'numeric',
-                                            month: 'long',
-                                            year: 'numeric',})}
+                                                month: 'long',
+                                                year: 'numeric',})}
                                             </p>
-                                            <h2 className=' text-[2rem] S768:text-[1.7rem] font-semibold'>
+                                            <h2 className=' text-[2rem] font-semibold'>
                                                 {title}
                                             </h2>
-                                            <p className=' text-[1.3rem] S768:text-[1.1rem]'>
-                                               {desc}
+                                            <p className=' text-[1.4rem]'>
+                                                {desc}
                                             </p>
                                         </div>
-                                    </div>
-                                    
-                                </Link>
-                                            )
-                                        })
-                                    }
-                                </div>
-                                
-                                </Fragment>
+                                    </Link>
+ 
+                                )
+                            })
+                        }
+                    </div>
+                    <div className=' flex items-center justify-start gap-16 flex-col '>
+                        {
+                            query.slice(1, 4).map((img, i)=>{
+                                const {image, title, _id, desc, publishedAt} = img;
 
-                            )
-                        })
-                    }
+                                return(
+                        <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl' key={i}>
+                        <div className=' flex flex-col S600:flex-row items-start justify-start gap-5' key={i}>
+                            <Image  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full S600:w-[20rem] S600:h-[14rem] S768:w-full S768:h-[15rem] S1024:h-[13rem] object-cover rounded-3xl" />
+                            <div>
+                                <p className=' text-[1.2rem]'>
+                                    {new Date(publishedAt).toDateString('en-UK',{day: 'numeric',
+                                month: 'long',
+                                year: 'numeric',})}
+                                </p>
+                                <h2 className=' text-[2rem] S768:text-[1.7rem] font-semibold'>
+                                    {title}
+                                </h2>
+                                <p className=' text-[1.3rem] S768:text-[1.1rem]'>
+                                    {desc}
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </Link>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </article>

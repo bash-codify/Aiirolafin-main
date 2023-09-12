@@ -1,10 +1,11 @@
 
 import Imag from "next/image";
-
-
 import SearchForm from "./SearchForm";
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
+import { Fragment, useState } from "react";
+import SearchField from "./SearchField";
+import { useGlobalContext } from "../context/contextapi";
 
 function getBanner(){
     
@@ -17,7 +18,10 @@ function getBanner(){
 
 export const Banner = async () => {
 
+    // const [searchbutton, setSearchButton] = useState(false);
+        const {location, setLocation, budget, setBudget, type, setType} = useGlobalContext();
     const query = await getBanner()
+
     
   return (
     
@@ -31,8 +35,8 @@ export const Banner = async () => {
             
             
             return (
-              <>
-              <div className=" w-full" key={index}>
+              <Fragment key={index}>
+              <div className=" w-full" >
                 <div className=" w-full ">
                   <Imag  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full h-[90vh] S500:h-[100vh] S768:h-[90vh] object-cover object-center relative -z-50" />
                 </div>
@@ -53,14 +57,20 @@ export const Banner = async () => {
                 </div>
 
               </div>
-              <div className=" -z-50">
+              <div className=" z-50">
                 <SearchForm/>
               </div>
-            </>
+            </Fragment>
             )
           })
         }
       </article>
+      {/* {
+        searchbutton &&
+        <div>
+          <SearchField />
+        </div>
+      } */}
     </section>
   )
 }

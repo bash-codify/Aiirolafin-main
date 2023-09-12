@@ -6,17 +6,22 @@ import { urlForImage } from '../../../sanity/lib/image';
 import { MdBathroom, MdBedroomParent } from 'react-icons/md';
 import Link from 'next/link';
 import { client } from '../../../sanity/lib/client';
+import { useGlobalContext } from '../context/contextapi';
+import listings from '../../../sanity/listings';
 
+function getListings(){
+    const listing = client.fetch(`*[_type == "listings"]`)
 
-function getProperty(){
-    const query = client.fetch(`*[_type == "listings"]`)
-    
-    return query
+    return listing
 }
+
 
 const Properties = async () => {
 
-    const query = await getProperty();
+    // const {properties, query} = useGlobalContext()
+    const listing = await getListings()
+
+    
   return (
     <section className=' w-full min-h-screen'>
 
@@ -63,7 +68,7 @@ const Properties = async () => {
                 <div className=' mt-10 flex flex-col S600:grid S600:grid-cols-2 S1024:grid-cols-3 items-center justify-center gap-8'>
 
             {
-                query.slice(0, 6).map((item, index)=>{
+                listing.slice(0, 6).map((item, index)=>{
                     const {image, types, rooms, location, bathroom, desc, categories, price, _id} = item;
 
                     return(
@@ -91,7 +96,7 @@ const Properties = async () => {
                                     <TbCurrencyNaira/>
                                 </span>
                                 <p>
-                                    {price}
+                                    {price.toLocaleString()}
                                 </p>
                             </div>
 

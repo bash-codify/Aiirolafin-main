@@ -21,7 +21,6 @@ const Header = () => {
         const Fixed = () => {
 
             if(window.scrollY > 650){
-                console.log('yelllo');
                 setIsFix(true);
             }
             if(window.scrollY < 650){
@@ -44,7 +43,7 @@ const Header = () => {
     })
     
   return (
-    <header className={` ${isfix ? 'fixed top-0 left-0 transition-all duration-500 ease-linear' : null} w-full h-[12vh] bg-primaryColor z-50 shadow-shadow `}>
+    <header className={` ${isfix ? 'fixed top-0 left-0 transition-all duration-500 ease-linear' : null} w-full h-[12vh] bg-primaryColor z-50`}>
 
         <nav className=' w-[90%] m-auto'>
             <div className=' flex items-center justify-between h-[12vh]'>
@@ -57,7 +56,7 @@ const Header = () => {
 
                 {/* Large Screen  Nav List Components */}
 
-                <div className='hidden S768:block'>
+                <div className='hidden S768:block z-50'>
                     <LargeNavlinks />
                 </div>
 
@@ -66,7 +65,7 @@ const Header = () => {
 
                 {/* Menu Icon */}
 
-                <div className=' text-[3.6rem] font-medium cursor-pointer text-white S768:hidden' onClick={()=> setIsToggle(true)}>
+                <div className=' text-[3.6rem] font-medium cursor-pointer text-white S768:hidden z-50' onClick={()=> setIsToggle(true)}>
                    <VscListFilter/>
                 </div>
 

@@ -83,9 +83,9 @@ const BlogsDetails = async ({query}) => {
 
                   return(
 
-                    <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl'>
+                    <Link href={`/blogs/${_id}`} className=' shadow-shadow p-4 rounded-3xl' key={i}>
 
-                      <div className=' flex flex-col S600:flex-row  S768:flex-col S1024:flex-row items-start justify-start gap-5' key={i}>
+                      <div className=' flex flex-col S600:flex-row  S768:flex-col S1024:flex-row items-start justify-start gap-5' >
 
                         <Image  src={urlForImage(image).url()} width={2000} height={2000} priority alt='banner' className=" w-full S600:w-[20rem] S600:h-[14rem] S768:w-full S768:h-[15rem] S1024:w-[20rem] S1024:h-[13rem] object-cover rounded-3xl" />
                         <div>
