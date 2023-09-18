@@ -27,7 +27,9 @@ export const Banner = async () => {
     
     <section className=" w-full min-h-[88vh]">
       <article >
-        {
+        <div>
+          
+                  {
           query.map((item, index) => {
             const image = item.image;
             const desc = item.desc;
@@ -57,13 +59,15 @@ export const Banner = async () => {
                 </div>
 
               </div>
-              <div className=" z-50">
-                <SearchForm/>
-              </div>
             </Fragment>
             )
           })
         }
+        </div>
+        <div>
+          <SearchForm/>
+        </div>
+
       </article>
       {/* {
         searchbutton &&

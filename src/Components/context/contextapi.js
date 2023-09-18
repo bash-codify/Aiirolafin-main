@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
     const [location, setLocation] = useState('')
     const [budget, setBudget] = useState('')
     const [type, setType] = useState('')
-    const [properties, setProperties] = useState()
+    const [properties, setProperties] = useState([])
 
 
     // const query = await client.fetch(`*[_type == "listings"]`)

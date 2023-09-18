@@ -18,8 +18,10 @@ function getListings(){
 
 const Properties = async () => {
 
-    // const {properties, query} = useGlobalContext()
+    const {properties} = useGlobalContext()
     const listing = await getListings()
+
+    console.log(properties);
 
     
   return (

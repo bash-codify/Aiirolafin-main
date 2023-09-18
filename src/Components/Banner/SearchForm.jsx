@@ -1,25 +1,33 @@
-'use client'
-import React, { useEffect, useState } from 'react'
 import { MdLocationPin } from "react-icons/md";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { GiFamilyHouse } from "react-icons/gi";
 import { RiSearch2Line } from "react-icons/ri";
 import { useGlobalContext } from '../context/contextapi';
+import { client } from "../../../sanity/lib/client";
 
-const SearchForm = () => {
 
-    const {location, setLocation, budget, setBudget, type, setType} = useGlobalContext();
+function getListings(){
+    const listing = client.fetch(`*[_type == "listings"]`)
+
+    return listing
+}
+
+const SearchForm = async () => {
+
+    const {location, setLocation, budget, setBudget, type, setType, setProperties, properties} = useGlobalContext();
+    const listing = await getListings();
     
 
     function submitHandler (e){
-
        
-        e.preventDefault()
-        
-        
-        console.log(location);
-        console.log(budget);
-        console.log(type);     
+        e.preventDefault()  
+
+        const filterItem = listing.filter((item) => item.location === location || item.price >= budget || item.categories === type)
+
+
+        if(filterItem){
+            setProperties(filterItem)
+        }
     }
 
   return (
@@ -93,8 +101,13 @@ const SearchForm = () => {
                     <input type="text" name='type' id='type' placeholder='Apartment' className=' w-[65vw] text-[1.4rem] h-[4rem] S500:w-[70vw] outline-none bg-[#111144de] text-textColor pl-3 rounded-xl S768:w-56 S820:w-60 S1024:w-80'
                     // required
                     // value={type}
-                    onChange={ e => setType(e.target.value)}
-                     />
+                    onChange={ e => setType(e.target.value)}/>
+                        {/* <option value="Please Select">Please Select</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="House">House</option>
+                       
+                    </select> */}
+                     
 
                 </div>
 
