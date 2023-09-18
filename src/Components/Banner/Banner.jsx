@@ -16,7 +16,7 @@ function getBanner(){
     
 }
 
-export const Banner = async () => {
+const Banner = async () => {
 
     // const [searchbutton, setSearchButton] = useState(false);
         const {location, setLocation, budget, setBudget, type, setType} = useGlobalContext();
@@ -78,3 +78,6 @@ export const Banner = async () => {
     </section>
   )
 }
+
+
+export default Banner

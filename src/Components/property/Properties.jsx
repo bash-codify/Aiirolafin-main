@@ -10,16 +10,16 @@ import { useGlobalContext } from '../context/contextapi';
 import listings from '../../../sanity/listings';
 
 function getListings(){
-    const listing = client.fetch(`*[_type == "listings"]`)
+    const listingProperty = client.fetch(`*[_type == "listings"]`)
 
-    return listing
+    return listingProperty
 }
 
 
 const Properties = async () => {
 
     const {properties} = useGlobalContext()
-    const listing = await getListings()
+    const listingProperty = await getListings()
 
     console.log(properties);
 
@@ -70,7 +70,7 @@ const Properties = async () => {
                 <div className=' mt-10 flex flex-col S600:grid S600:grid-cols-2 S1024:grid-cols-3 items-center justify-center gap-8'>
 
             {
-                listing.slice(0, 6).map((item, index)=>{
+                listingProperty.slice(0, 6).map((item, index)=>{
                     const {image, types, rooms, location, bathroom, desc, categories, price, _id} = item;
 
                     return(

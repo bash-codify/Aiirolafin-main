@@ -7,9 +7,9 @@ import { client } from "../../../sanity/lib/client";
 
 
 function getListings(){
-    const listing = client.fetch(`*[_type == "listings"]`)
+    const listingItem = client.fetch(`*[_type == "listings"]`)
 
-    return listing
+    return listingItem
 }
 
 const SearchForm = async () => {
@@ -22,7 +22,7 @@ const SearchForm = async () => {
        
         e.preventDefault()  
 
-        const filterItem = listing.filter((item) => item.location === location || item.price >= budget || item.categories === type)
+        const filterItem = listingItem.filter((item) => item.location === location || item.price >= budget || item.categories === type)
 
 
         if(filterItem){
