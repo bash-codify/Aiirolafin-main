@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-     "serve": "webpack serve --mode development"
+    "lint": "next lint"
   },
+  
   "dependencies": {
     "@formspree/react": "^2.4.4",
     "@sanity/cli": "^3.8.3",

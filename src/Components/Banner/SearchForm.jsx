@@ -15,7 +15,7 @@ function getListings(){
 const SearchForm = async () => {
 
     const {location, setLocation, budget, setBudget, type, setType, setProperties, properties} = useGlobalContext();
-    const listing = await getListings();
+    const listingItem = await getListings();
     
 
     function submitHandler (e){
